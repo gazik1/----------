@@ -1,0 +1,104 @@
+html,
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#box_game {
+    margin: 0 auto 0;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.397);
+    border-radius: 5px;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+
+    grid-template-rows: repeat(auto-fit, 100px);
+    width: 100%;
+    max-width: 600px;
+    gap: 10px 5%;
+
+    min-height: 100%;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.493);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color .5s,opacity .5s;
+
+    animation: opasitiCard;
+    animation-fill-mode: backwards;
+    /* Задержка и продолжительность написанны в js */
+    background-color: brown;
+}
+
+@keyframes opasitiCard {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+/* .card:hover {
+    background-color: rgb(73, 42, 42);
+} */
+#gameDear{
+    background-color: brown;
+}
+#gameWean{
+    background-color: gold;
+}
+#gameDear,#gameWean{
+    position: absolute;
+transition: opacity 1s, scale 1s;
+padding: 50px;
+font-size: 4em;
+left: 50%;
+top: 50%;
+transform: translate(-50%,-50%) ;
+transform-origin: left top;
+
+opacity: 0%;
+
+scale: 0%;
+
+}
+#gameStart{
+    cursor: pointer;
+    align-items: center;
+    margin: 0;
+    position: absolute;
+transition: opacity 1s, scale 1s;
+
+padding: 50px;
+font-size: 4rem;
+background-color: darkgrey;
+left: 50%;
+top: 50%;
+transform: translate(-50%,-50%);
+opacity: 100%;
+transform-origin: left top;
+}
+
+#health{
+    cursor: pointer;
+    align-items: center;
+    margin: 0;
+
+padding: 20px;
+font-size: 4rem;
+background-color: rgb(147, 227, 238);
+left: 0;
+top: 0;
+opacity: 100%;
+transform-origin: left top;
+}
